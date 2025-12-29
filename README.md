@@ -1,81 +1,75 @@
-# 🏨 Hotel Paradise - Hotel Management System
+# Hotel Paradise - Hotel Management System
 
-This project is a full-stack **Hotel Management System** designed to manage room availability, reservations, and administrative tasks for a hotel. It features a real-time booking system, admin dashboard, and secure authentication.
+## Description
 
-## 🚀 Features
+The Hotel Paradise Management System is a web-based application designed to simplify room reservations, manage availability, and streamline administrative oversight for a modern hotel. This project allows different types of Admins and Guests (Users) — to interact with the system based on their roles.
 
-### User Features (Guest)
-- **User Registration & Login:** Secure account creation.
-- **Room Browsing:** View available rooms with images and prices.
-- **Booking System:** Make reservations with real-time availability checks (prevents double booking).
-- **My Reservations:** View personal booking history.
+Admins can manage rooms, view all reservations, and oversee the overall workflow including monthly earnings. Guests can search for available rooms, view details, and make real-time bookings without conflicts. This system ensures a smooth and efficient booking experience for all users using a modern Full-Stack architecture.
 
-### Admin Features
-- **Dashboard:** View total monthly earnings.
-- **Room Management:** Add new rooms, update room prices, and view status.
-- **Reservation Management:** View and cancel reservations.
-- **User Management:** View registered users.
+## Features
+- **Admin Dashboard**: 
+  - Manage rooms (create, edit prices, change status).
+  - View and manage all guest reservations.
+  - View total monthly earnings.
+  - Oversee registered users.
+  
+- **Guest Dashboard**:
+  - Browse available rooms with images and prices.
+  - Make reservations with real-time conflict detection.
+  - View upcoming and past reservations.
+  - Receive alternative room suggestions if a room is full.
 
-## 🛠️ Tech Stack
+- **Secure Authentication**:
+  - Role-based login system for Admins and Guests.
+  - Passwords are securely hashed and stored.
+  - Sessions are managed via JSON Web Tokens (JWT).
 
-- **Frontend:** React.js, React Router, Axios, CSS3
-- **Backend:** Node.js, Express.js
-- **Database:** MySQL
-- **Security:** JSON Web Token (JWT) for authentication, Bcrypt for password hashing.
+- **Responsive Design**:
+  - Clean, user-friendly interface designed to work on all devices.
 
----
+## How to Use the Project
 
-## ⚙️ Installation & Setup Guide
+### Prerequisites
+  Before running the project, ensure you have the following installed:
+  - Node.js (v14 or later)
+  - MySQL (Server and Workbench)
+  - A web browser (for accessing the application)
+  - Git
 
-Follow these steps to run the project locally.
+### Setting Up the Project
 
-### 1. Database Setup
-1. Open **MySQL Workbench or XAMPP **.
-2. Create a new query tab.
-3. Copy and paste the content of `database_setup.sql` (or the SQL script provided in the project).
-4. Execute the script to create the `hotel_db` database and tables.
+1. **Clone or Download the Project**:
+   - Clone this repository or download it as a ZIP file.
 
-### 2. Backend Setup (Server)
-The backend runs on port 5000. Open a terminal and run:
-# Go to the server directory
+   ```bash
+   [https://github.com/boraeskin/hotel-reservation-app.git](https://github.com/boraeskin/hotel-reservation-app.git)
+
+
+2. **Import the Database**:
+- Open your database management tool (MySQL Workbench).
+- Create a new schema named hotel_db (or just use the import function).
+- Import the SQL file included in the project (database.sql) into the database.
+
+
+  3. **Configure Backend (Server)**:
+- Open a terminal and navigate to the server directory.
+- Install dependencies and start the server:
+  ```bash
 cd hotel-server
-
-# Install dependencies
 npm install
-
-# Start the server
 node index.js
-# Output: Server running on port 5000
-# Output: MySQL connected
+```
 
 
-### 3. Frontend Setup (Client)
-The frontend runs on port 3000. Open a new terminal window and run:
-# Navigate to the client directory
+
+4. **Run the Frontend (Client):**:
+- Open a new terminal window and navigate to the client directory.
+- Install dependencies and start the React application:
+```bash
 cd hotel-client
-
-# Install dependencies
 npm install
-
-# Start the React app
 npm start
+```
 
-
-
-Project Structure
-
-hotel-management-system/
-├── hotel-client/           # React Frontend
-│   ├── src/
-│   │   ├── components/     # Navbar, Footer
-│   │   ├── pages/          # Home, Login, Register, Rooms, Bookings, Users
-│   │   ├── App.js          # Main Routing & Layout
-│   │   ├── App.css         # Global Styling
-│   │   └── index.js        # Root Entry
-│   └── package.json
-│
-├── hotel-server/           # Node.js Backend
-│   ├── index.js            # Express Server, API Routes & DB Connection
-│   └── package.json
-│
-└── README.md               # Project Documentation
+Authors
+Bora Eskin
