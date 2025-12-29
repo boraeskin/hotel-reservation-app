@@ -51,25 +51,55 @@ Admins can manage rooms, view all reservations, and oversee the overall workflow
 - Import the SQL file included in the project (database.sql) into the database.
 
 
-  3. **Configure Backend (Server)**:
+3. **Configure Backend (Server)**:
 - Open a terminal and navigate to the server directory.
 - Install dependencies and start the server:
-  ```bash
-cd hotel-server
-npm install
-node index.js
-```
+   ```bash
+   cd hotel-server
+   npm install
+   node index.js
+   ```
 
 
-
-4. **Run the Frontend (Client):**:
+4. **Run the Frontend (Client)**:
 - Open a new terminal window and navigate to the client directory.
 - Install dependencies and start the React application:
-```bash
-cd hotel-client
-npm install
-npm start
-```
+   ```bash
+   cd hotel-client
+   npm install
+   npm start
+   ```
+   
+## Project Structure
 
-Authors
-Bora Eskin
+### Root Directory
+- **hotel-client/** (Frontend)
+  - **public/**: Static assets
+  - **src/**
+    - **components/**
+      - `Navbar.js`: Navigation bar for users and admins
+      - `Footer.js`: Site footer with links
+    - **pages/**
+      - `Home.js`: Landing page with video background
+      - `Login.js`: Authentication page
+      - `Register.js`: New user registration
+      - `Rooms.js`: Admin room management
+      - `Bookings.js`: Reservation interface for guests
+      - `Users.js`: Admin user management
+    - `App.js`: Main routing logic
+    - `App.css`: Global styling
+- **hotel-server/** (Backend)
+  - `index.js`: Main entry point (API routes & DB connection)
+  - `package.json`: Backend dependencies
+- `database.sql`: SQL file to set up the database
+- `README.md`: Project description and instructions
+
+
+## Technologies Used
+- Frontend: React.js, React Router, Axios, CSS3
+- Backend : Node.js, Express.js
+- Database: MySQL
+- Security :JWT (JSON Web Tokens), Bcrypt (Password Hashing)
+
+## Author
+- Bora Eskin
